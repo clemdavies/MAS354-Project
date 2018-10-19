@@ -1,0 +1,39 @@
+
+clear
+
+% fThrust = 1;
+% fFriction = 0;
+% angle = pi/2;
+% mRocket = 100;
+% aGravity = 6.67e-11;
+% 
+% args = [fThrust,fFriction,angle,mRocket,aGravity];
+% constantAccelVert = AccelVert(args);
+% 
+% args = [fThrust,fFriction,angle,mRocket];
+% constantAccelHor = AccelHor(args);
+% 
+% constantAccelDir = AccelDir();
+
+earthRadius = 6378.14;
+earthMass = 5.972e+24;
+
+orbitRadius = (earthRadius + 400) * 1000;
+gravity = 6.67e-11;
+bodyMass = earthMass;
+
+gravity * bodyMass
+
+args = [orbitRadius,gravity,bodyMass];
+orbitVelocity = VelocOrbit(args);
+
+orbitVelocity = 7900;
+orbitRadius = 6628140;
+angleAtBurnout = 89*pi/180;
+args = [orbitRadius,orbitVelocity,gravity,bodyMass,angleAtBurnout];
+launchAngle = LaunchAngle(args);
+launchAngle
+
+
+
+
